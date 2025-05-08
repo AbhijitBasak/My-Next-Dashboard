@@ -1,5 +1,15 @@
 "use client"
 import React from 'react'
+
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
+
 import { LogOut, Moon, Search, SearchIcon, Settings, Sun, User } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
@@ -56,8 +66,13 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger>
               <Avatar>
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>AJ</AvatarFallback>
+                {/* <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>AJ</AvatarFallback> */}
+
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
+
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -65,7 +80,19 @@ export default function Navbar() {
               <DropdownMenuSeparator />
               <DropdownMenuItem><User /> Profile</DropdownMenuItem>
               <DropdownMenuItem><Settings /> Setting</DropdownMenuItem>
-              <DropdownMenuItem variant='destructive'><LogOut /> Logout</DropdownMenuItem>
+
+              <DropdownMenuItem>
+                <SignedIn>
+                  <DropdownMenuItem variant='destructive'><LogOut /> Logout</DropdownMenuItem>
+                </SignedIn>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem>
+                <SignedOut>
+                  <SignInButton />
+                  <SignUpButton />
+                </SignedOut>
+              </DropdownMenuItem>
 
             </DropdownMenuContent>
           </DropdownMenu>
