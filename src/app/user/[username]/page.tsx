@@ -1,3 +1,5 @@
+"use client"
+
 import CardList from "@/components/CardList"
 import {
   Breadcrumb,
@@ -27,6 +29,9 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import EditUser from "@/components/EditUser"
+import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar"
+import AppLineChart from "@/components/AppLineChart"
+
 
 
 export default function SingleUserPage() {
@@ -52,7 +57,7 @@ export default function SingleUserPage() {
       <div className="mt-4 flex flex-col xl:flex-row gap-8">
         {/* Left */}
         <div className="w-full xl:w-1/3 space-y-5">
-          {/* Badgr Container */}
+          {/* Badge Container */}
           <div className="bg-primary-foreground rounded-lg p-4 ">
             <h1 className="text-lg font-medium mb-6">User Badges</h1>
             <div className="flex gap-4 mt-4">
@@ -169,11 +174,25 @@ export default function SingleUserPage() {
         {/* Right */}
         <div className="w-full xl:w-2/3 space-y-5">
 
-          <div className="bg-primary-foreground rounded-lg p-4 "><CardList title="Popular Content" /></div>
-          <div className="bg-primary-foreground rounded-lg p-4 "><CardList title="Popular Content" /></div>
+          <div className="bg-primary-foreground rounded-lg p-4 ">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://avatars.githubusercontent.com/u/149414532?v=4&size=64" className="w-12 h-12 rounded-3xl"/>
+                <AvatarFallback>AJ</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">Abhijit Basak</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              voluptas distinctio ab ipsa commodi fugiat labore quos veritatis
+              cum corrupti sed repudiandae ipsum, harum recusandae ratione ipsam
+              in, quis quia.
+            </p>
+          </div>
+          <div className="bg-primary-foreground rounded-lg p-4 "><AppLineChart /></div>
 
         </div>
       </div>
     </>
-  )
+  ) 
 }
