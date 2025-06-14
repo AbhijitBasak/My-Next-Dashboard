@@ -54,13 +54,13 @@ const chartConfig = {
 
 export default function AppPieChart() {
   const id = "pie-interactive"
-  const [activeMonth, setActiveMonth] = React.useState(desktopData[0].month)
+  // const [activeMonth, setActiveMonth] = React.useState(desktopData[0].month)
 
-  const activeIndex = React.useMemo(
-    () => desktopData.findIndex((item) => item.month === activeMonth),
-    [activeMonth]
-  )
-  const months = React.useMemo(() => desktopData.map((item) => item.month), [])
+  // const activeIndex = React.useMemo(
+  //   () => desktopData.findIndex((item) => item.month === activeMonth),
+  //   [activeMonth]
+  // )
+  // const months = React.useMemo(() => desktopData.map((item) => item.month), [])
 
   return (
     <>
@@ -81,7 +81,7 @@ export default function AppPieChart() {
             nameKey="month"
             innerRadius={60}
             strokeWidth={5}
-            activeIndex={activeIndex}
+            activeIndex={0}
             activeShape={({
               outerRadius = 0,
               ...props
@@ -111,7 +111,7 @@ export default function AppPieChart() {
                         y={viewBox.cy}
                         className="fill-foreground text-3xl font-bold"
                       >
-                        {desktopData[activeIndex].desktop.toLocaleString()}
+                        {desktopData[0].desktop.toLocaleString()}
                       </tspan>
                       <tspan
                         x={viewBox.cx}
