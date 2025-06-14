@@ -8,7 +8,6 @@ import { PieSectorDataItem } from "recharts/types/polar/Pie"
 import {
   ChartConfig,
   ChartContainer,
-  ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"

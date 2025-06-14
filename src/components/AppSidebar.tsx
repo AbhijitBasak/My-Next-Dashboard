@@ -34,6 +34,11 @@ const items = [
     icon: Calendar,
   },
   {
+    title: "Payments",
+    url: "/payments",
+    icon: Inbox,
+  },
+  {
     title: "Search",
     url: "#",
     icon: Search,

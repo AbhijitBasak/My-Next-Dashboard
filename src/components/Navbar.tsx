@@ -2,7 +2,6 @@
 import React from 'react'
 
 import {
-  ClerkProvider,
   SignInButton,
   SignUpButton,
   SignedIn,
@@ -10,8 +9,8 @@ import {
   UserButton,
 } from '@clerk/nextjs'
 
-import { LogOut, Moon, Search, SearchIcon, Settings, Sun, User } from 'lucide-react'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { LogOut, Moon, Settings, Sun, User } from 'lucide-react'
+import { Avatar } from '@/components/ui/avatar'
 import {
   DropdownMenu,
   DropdownMenuContent,

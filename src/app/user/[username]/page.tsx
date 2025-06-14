@@ -20,10 +20,6 @@ import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react"
 
 import {
   Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Badge } from "@/components/ui/badge"
