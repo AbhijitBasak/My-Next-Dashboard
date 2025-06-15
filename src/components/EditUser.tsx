@@ -47,7 +47,7 @@ export default function EditUser() {
     defaultValues: {
       username: "john.doe",
       email: "john.doe@gmail.com",
-      phone: "+1 234 5678",
+      phone: "+91 234 5678",
       location: "New York, NY",
       role: "admin",
     },
@@ -126,7 +126,7 @@ export default function EditUser() {
               <FormField
                 control={form.control}
                 name="role"
-                render={({ field }) => (
+                render={() => (
                   <FormItem>
                     <FormLabel>Role</FormLabel>
                     <FormControl>
