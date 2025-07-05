@@ -74,7 +74,7 @@ export default function Navbar() {
 
               </Avatar>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            {/* <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem><User /> Profile</DropdownMenuItem>
@@ -93,7 +93,7 @@ export default function Navbar() {
                 </SignedOut>
               </DropdownMenuItem>
 
-            </DropdownMenuContent>
+            </DropdownMenuContent> */}
           </DropdownMenu>
 
 

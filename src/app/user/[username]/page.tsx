@@ -138,19 +138,19 @@ export default function SingleUserPage() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Username:</span>
-                <span>john.doe</span>
+                <span>AJ Basak</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Email:</span>
-                <span>john.doe@gmail.com</span>
+                <span>aj-basak@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Phone:</span>
-                <span>+1 234 5678</span>
+                <span>+91 91234 5678</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Location:</span>
-                <span>New York, NY</span>
+                <span>kolkata, IN</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Role:</span>
